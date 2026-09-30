@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selvapriya S — Data Analyst &amp; Machine Learning Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-theme">
+    <!-- 3D Three.js Professional WebGL Background -->
+    <canvas id="three-canvas"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <!-- Soft Professional Ambient Lighting Orbs -->
+    <div class="pro-ambient-orb-1"></div>
+    <div class="pro-ambient-orb-2"></div>
+    <div class="pro-grid-pattern"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="brand">
+                <div class="brand-cube-wrapper">
+                    <span class="brand-cube"></span>
+                </div>
+                <span class="brand-name">SELVAPRIYA<span class="accent-dot">.</span>S</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="#home" class="nav-link active" data-section="home">Home</a>
+                <a href="#profile" class="nav-link" data-section="profile">Profile</a>
+                <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+                <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+                <a href="#skills" class="nav-link" data-section="skills">Toolkit</a>
+                <a href="#education" class="nav-link" data-section="education">Education</a>
+                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="mailto:priyasenthil054@gmail.com" class="nav-cta">
+                    <span>Hire Me</span>
+                </a>
+                <div class="nav-hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#home" class="mobile-link" data-section="home">Home</a>
+        <a href="#profile" class="mobile-link" data-section="profile">Profile</a>
+        <a href="#experience" class="mobile-link" data-section="experience">Experience</a>
+        <a href="#projects" class="mobile-link" data-section="projects">Projects</a>
+        <a href="#skills" class="mobile-link" data-section="skills">Toolkit</a>
+        <a href="#education" class="mobile-link" data-section="education">Education</a>
+        <a href="#contact" class="mobile-link" data-section="contact">Contact</a>
+        <a href="mailto:priyasenthil054@gmail.com" class="btn btn-primary" style="margin-top:20px;">Hire Me</a>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- HERO / SUMMARY SECTION -->
+        <section id="home" class="section hero-section">
+            <div class="hero-container">
+                <div class="hero-left">
+                    <div class="status-pill animate-fade">
+                        <span class="live-dot"></span>
+                        <span class="pill-text">OPEN TO DATA ANALYST / DATA SCIENTIST ROLES</span>
+                    </div>
+
+                    <h1 class="hero-title animate-fade">
+                        Turning raw data into <span class="gradient-text glow-text">decisions</span>, not just dashboards.
+                    </h1>
+
+                    <p class="hero-sub animate-fade">
+                        Data Analyst with hands-on experience in <strong>Python, SQL, and Machine Learning</strong> — 
+                        building predictive models, KPI dashboards, and end-to-end ML pipelines that hold up outside a notebook.
+                    </p>
+
+                    <!-- Interactive Code Output -->
+                    <div class="terminal-badge animate-fade">
+                        <span class="term-prompt">model.predict(role)</span>
+                        <span class="term-output" id="typed-out">Data Analyst</span>
+                        <span class="term-cursor">|</span>
+                    </div>
+
+                    <div class="hero-actions animate-fade">
+                        <a href="#contact" class="btn btn-primary">
+                            <span>Get in touch</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                        <a href="#profile" class="btn btn-ghost">
+                            <span>View Profile</span>
+                        </a>
+                        <a href="https://github.com/Selvapriya033" target="_blank" rel="noopener noreferrer" class="btn btn-icon-ghost" title="GitHub">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/selvapriya-s-3bb65a297/" target="_blank" rel="noopener noreferrer" class="btn btn-icon-ghost" title="LinkedIn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 3D Interactive Floating Card -->
+                <div class="hero-3d-card" data-tilt>
+                    <div class="h3d-inner">
+                        <div class="h3d-header">
+                            <div class="h3d-dots"><span></span><span></span><span></span></div>
+                            <span class="h3d-tag">AI/ML Pipeline &bull; Active</span>
+                        </div>
+                        <div class="h3d-stats-grid">
+                            <div class="h3d-stat">
+                                <span class="h3d-num" data-target="4">0</span>
+                                <span class="h3d-label">Months Experience</span>
+                            </div>
+                            <div class="h3d-stat">
+                                <span class="h3d-num accent-amber" data-target="4">0</span>
+                                <span class="h3d-label">ML Projects Shipped</span>
+                            </div>
+                            <div class="h3d-stat">
+                                <span class="h3d-num accent-coral" data-target="8.8" data-decimal="1">0</span>
+                                <span class="h3d-label">B.E. CGPA</span>
+                            </div>
+                            <div class="h3d-stat">
+                                <span class="h3d-num" data-target="6">0</span>
+                                <span class="h3d-label">NPTEL Certifications</span>
+                            </div>
+                        </div>
+                        <div class="h3d-footer">
+                            <span class="h3d-status-indicator"></span>
+                            <span>Interactive 3D Data Waves &bull; Move mouse to rotate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-cue">
+                <div class="mouse-icon">
+                    <div class="wheel"></div>
+                </div>
+                <span>SCROLL DOWN TO EXPLORE</span>
+            </div>
+        </section>
+
+        <!-- PROFILE / ABOUT ME SECTION -->
+        <section id="profile" class="section">
+            <div class="section-container">
+                <div class="section-header reveal-up">
+                    <span class="section-tag">01 / CANDIDATE PROFILE</span>
+                    <h2 class="section-title">About <span class="gradient-text">Selvapriya S</span></h2>
+                </div>
+
+                <div class="profile-grid">
+                    <!-- Left: Profile Original Photo 3D Card -->
+                    <div class="profile-card-3d reveal-up" data-tilt>
+                        <div class="profile-image-container">
+                            <div class="profile-avatar-frame">
+                                <img src="assets/profile-photo.jpg" alt="Selvapriya S — Data Analyst & ML Engineer" class="profile-avatar-img">
+                            </div>
+                            <div class="profile-badge-open">
+                                <span class="badge-dot-live"></span>
+                                <span>Available for Hire</span>
+                            </div>
+                        </div>
+
+                        <div class="profile-quick-info">
+                            <h3 class="profile-name">Selvapriya S</h3>
+                            <p class="profile-title-tag">Data Analyst &bull; Machine Learning Engineer</p>
+
+                            <div class="profile-chips">
+                                <span class="p-chip">📍 Coimbatore, India</span>
+                                <span class="p-chip">🎓 B.E. CSE &bull; CGPA: 8.8</span>
+                                <span class="p-chip">💼 Ex-Data Analyst Intern</span>
+                            </div>
+
+                            <div class="profile-contact-actions">
+                                <a href="mailto:priyasenthil054@gmail.com" class="btn btn-primary btn-full">
+                                    <span>Contact Me</span>
+                                </a>
+                                <a href="https://www.linkedin.com/in/selvapriya-s-3bb65a297/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-full">
+                                    <span>LinkedIn Profile</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Detailed Professional Bio & Core Competencies -->
+                    <div class="profile-bio-card reveal-up">
+                        <h3 class="bio-heading">
+                            Bridging the gap between <span class="highlight">complex business data</span> and <span class="highlight">actionable machine learning models</span>.
+                        </h3>
+
+                        <p class="bio-paragraph">
+                            I am a results-oriented <strong>Data Analyst &amp; ML Engineer</strong> with a strong Computer Science engineering foundation (B.E. CSE from <em>Nehru Institute of Engineering and Technology</em>, graduating with an <strong>8.8 CGPA</strong>).
+                        </p>
+
+                        <p class="bio-paragraph">
+                            Through my work as a <strong>Data Analyst Intern at App Innovation Technologies</strong>, I have automated repetitive data processing pipelines using Python and SQL, designed high-impact Power BI executive dashboards, and trained predictive models with Scikit-learn and TensorFlow that produce measurable business improvements.
+                        </p>
+
+                        <!-- 4 Core Pillars Grid -->
+                        <div class="competencies-grid">
+                            <div class="comp-box">
+                                <div class="comp-icon-box teal-bg">📊</div>
+                                <div>
+                                    <h4 class="comp-title">Data Analysis &amp; EDA</h4>
+                                    <p class="comp-desc">Data wrangling, cleaning, exploratory statistics, and hypothesis validation.</p>
+                                </div>
+                            </div>
+
+                            <div class="comp-box">
+                                <div class="comp-icon-box coral-bg">🤖</div>
+                                <div>
+                                    <h4 class="comp-title">Machine Learning</h4>
+                                    <p class="comp-desc">Classification, regression, feature engineering, TensorFlow &amp; scikit-learn pipelines.</p>
+                                </div>
+                            </div>
+
+                            <div class="comp-box">
+                                <div class="comp-icon-box amber-bg">⚡</div>
+                                <div>
+                                    <h4 class="comp-title">Pipeline Automation</h4>
+                                    <p class="comp-desc">Automated ETL preprocessing and SQL database transformations.</p>
+                                </div>
+                            </div>
+
+                            <div class="comp-box">
+                                <div class="comp-icon-box purple-bg">📈</div>
+                                <div>
+                                    <h4 class="comp-title">BI &amp; KPI Dashboards</h4>
+                                    <p class="comp-desc">Interactive Power BI reports, metric storytelling, and stakeholder insights.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Open Locations Banner -->
+                        <div class="locations-banner">
+                            <span class="loc-icon">🎯</span>
+                            <div>
+                                <strong>Preferred Job Locations:</strong> Hyderabad, Pune, Mumbai, Coimbatore, Chennai, and Bengaluru (Open to Remote / Hybrid / On-site).
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE SECTION -->
+        <section id="experience" class="section">
+            <div class="section-container">
+                <div class="section-header reveal-up">
+                    <span class="section-tag">02 / CAREER</span>
+                    <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
+                </div>
+
+                <div class="exp-card reveal-up" data-tilt>
+                    <div class="exp-header">
+                        <div class="exp-title-block">
+                            <h3 class="exp-role">Data Analyst Intern</h3>
+                            <div class="exp-company">App Innovation Technologies Pvt Ltd</div>
+                        </div>
+                        <div class="exp-badge">JAN 2026 — APR 2026</div>
+                    </div>
+
+                    <div class="exp-divider"></div>
+
+                    <ul class="exp-list">
+                        <li>
+                            <span class="exp-bullet">▸</span>
+                            <div>
+                                Improved data reporting turnaround by automating data cleaning and preprocessing pipelines in <strong>Python and SQL</strong>, cutting down manual processing hours significantly.
+                            </div>
+                        </li>
+                        <li>
+                            <span class="exp-bullet">▸</span>
+                            <div>
+                                Increased stakeholder decision-making speed by designing and deploying high-impact, interactive <strong>Power BI</strong> dashboards covering critical business KPIs.
+                            </div>
+                        </li>
+                        <li>
+                            <span class="exp-bullet">▸</span>
+                            <div>
+                                Boosted prediction accuracy by building, fine-tuning, and evaluating machine learning models with <strong>scikit-learn and TensorFlow</strong> on real-time business datasets.
+                            </div>
+                        </li>
+                        <li>
+                            <span class="exp-bullet">▸</span>
+                            <div>
+                                Reduced data quality issues by implementing structured <strong>EDA and validation checks</strong>, translating analytical findings into clear statistical summaries for stakeholders.
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="exp-tags">
+                        <span class="chip chip-highlight">Python</span>
+                        <span class="chip chip-highlight">SQL</span>
+                        <span class="chip">Power BI</span>
+                        <span class="chip">TensorFlow</span>
+                        <span class="chip">Scikit-learn</span>
+                        <span class="chip">EDA</span>
+                        <span class="chip">KPI Dashboards</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION WITH REALISTIC 3D RENDERED LOGOS -->
+        <section id="projects" class="section">
+            <div class="section-container">
+                <div class="section-header reveal-up">
+                    <span class="section-tag">03 / PORTFOLIO</span>
+                    <h2 class="section-title">Featured 3D <span class="gradient-text">Projects</span></h2>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1: AI-Based Animal Healthcare Prediction -->
+                    <div class="project-3d-card reveal-up" data-tilt>
+                        <div class="p3d-border teal-border"></div>
+                        <div class="p3d-header">
+                            <!-- 3D Realistic Rendered Logo Image -->
+                            <div class="p3d-realistic-logo-wrapper">
+                                <div class="p3d-logo-frame frame-teal">
+                                    <img src="assets/animal-3d.jpg" alt="3D Animal Healthcare Logo" class="p3d-rendered-img">
+                                </div>
+                                <div class="logo-3d-shadow"></div>
+                            </div>
+
+                            <div class="p3d-meta">
+                                <span class="p3d-tag">COLLEGE MINOR PROJECT</span>
+                                <h3 class="p3d-title">AI-Based Animal Healthcare Prediction</h3>
+                            </div>
+                        </div>
+
+                        <ul class="p3d-bullets">
+                            <li>Built a machine learning pipeline to predict animal health conditions from symptom and sensor data, reducing manual diagnosis effort.</li>
+                            <li>Evaluated model performance using <strong>precision, recall, and F1-score</strong> with Python, scikit-learn, and TensorFlow.</li>
+                        </ul>
+
+                        <div class="p3d-tech-stack">
+                            <span>Python</span>
+                            <span>TensorFlow</span>
+                            <span>Scikit-learn</span>
+                            <span>ML Pipeline</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Heart Disease Prediction System (User's 3D Sample Heart) -->
+                    <div class="project-3d-card reveal-up" data-tilt>
+                        <div class="p3d-border coral-border"></div>
+                        <div class="p3d-header">
+                            <!-- 3D Realistic Anatomical Heart Logo -->
+                            <div class="p3d-realistic-logo-wrapper">
+                                <div class="p3d-logo-frame frame-coral">
+                                    <img src="assets/heart-3d.jpg" alt="3D Anatomical Heart Logo" class="p3d-rendered-img">
+                                </div>
+                                <div class="logo-3d-shadow"></div>
+                            </div>
+
+                            <div class="p3d-meta">
+                                <span class="p3d-tag coral-tag">PERSONAL PROJECT</span>
+                                <h3 class="p3d-title">Heart Disease Prediction System</h3>
+                            </div>
+                        </div>
+
+                        <ul class="p3d-bullets">
+                            <li>Built a classification model to predict heart disease risk from patient health data, identifying key clinical risk indicators.</li>
+                            <li>Performed EDA and feature engineering, thoroughly evaluating models with <strong>precision, recall, F1-score, and ROC-AUC</strong>.</li>
+                        </ul>
+
+                        <div class="p3d-tech-stack">
+                            <span>Python</span>
+                            <span>Scikit-learn</span>
+                            <span>EDA</span>
+                            <span>ROC-AUC</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Crop Disease Detection (Computer Vision) -->
+                    <div class="project-3d-card reveal-up" data-tilt>
+                        <div class="p3d-border amber-border"></div>
+                        <div class="p3d-header">
+                            <!-- 3D Realistic Rendered AgTech Leaf Scanner Logo -->
+                            <div class="p3d-realistic-logo-wrapper">
+                                <div class="p3d-logo-frame frame-amber">
+                                    <img src="assets/crop-3d.jpg" alt="3D Crop Disease Detection Logo" class="p3d-rendered-img">
+                                </div>
+                                <div class="logo-3d-shadow"></div>
+                            </div>
+
+                            <div class="p3d-meta">
+                                <span class="p3d-tag amber-tag">PERSONAL PROJECT</span>
+                                <h3 class="p3d-title">Crop Disease Detection (Computer Vision)</h3>
+                            </div>
+                        </div>
+
+                        <ul class="p3d-bullets">
+                            <li>Built an image classification model to detect crop diseases directly from leaf images, enabling timely intervention for farmers.</li>
+                            <li>Preprocessed and augmented image datasets, evaluating performance using <strong>accuracy, precision, and recall</strong> with TensorFlow &amp; Keras.</li>
+                        </ul>
+
+                        <div class="p3d-tech-stack">
+                            <span>TensorFlow</span>
+                            <span>Keras</span>
+                            <span>OpenCV</span>
+                            <span>Image Augmentation</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: EV Charging Station Demand Prediction -->
+                    <div class="project-3d-card reveal-up" data-tilt>
+                        <div class="p3d-border purple-border"></div>
+                        <div class="p3d-header">
+                            <!-- 3D Realistic Rendered EV Charging Station Logo -->
+                            <div class="p3d-realistic-logo-wrapper">
+                                <div class="p3d-logo-frame frame-purple">
+                                    <img src="assets/ev-3d.jpg" alt="3D EV Charging Station Logo" class="p3d-rendered-img">
+                                </div>
+                                <div class="logo-3d-shadow"></div>
+                            </div>
+
+                            <div class="p3d-meta">
+                                <span class="p3d-tag purple-tag">PERSONAL PROJECT</span>
+                                <h3 class="p3d-title">EV Charging Station Demand Prediction</h3>
+                            </div>
+                        </div>
+
+                        <ul class="p3d-bullets">
+                            <li>Built a demand forecasting model for EV charging stations using historical usage metrics and time-series patterns.</li>
+                            <li>Performed exploratory analysis and feature engineering to isolate key demand drivers, measuring outcomes using <strong>RMSE &amp; MAE</strong>.</li>
+                        </ul>
+
+                        <div class="p3d-tech-stack">
+                            <span>Python</span>
+                            <span>Time-Series</span>
+                            <span>Regression</span>
+                            <span>Scikit-learn</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS / TOOLKIT SECTION -->
+        <section id="skills" class="section">
+            <div class="section-container">
+                <div class="section-header reveal-up">
+                    <span class="section-tag">04 / CAPABILITIES</span>
+                    <h2 class="section-title">Technical <span class="gradient-text">Toolkit</span></h2>
+                </div>
+
+                <div class="toolkit-grid">
+                    <!-- Programming -->
+                    <div class="toolkit-card reveal-up" data-tilt>
+                        <div class="tk-header">
+                            <div class="tk-dot" style="background:var(--teal)"></div>
+                            <span class="tk-title">PROGRAMMING</span>
+                        </div>
+                        <div class="chips-container">
+                            <span class="chip chip-highlight">Python</span>
+                            <span class="chip chip-highlight">SQL</span>
+                        </div>
+                    </div>
+
+                    <!-- Data Analysis -->
+                    <div class="toolkit-card reveal-up" data-tilt>
+                        <div class="tk-header">
+                            <div class="tk-dot" style="background:var(--amber)"></div>
+                            <span class="tk-title">DATA ANALYSIS</span>
+                        </div>
+                        <div class="chips-container">
+                            <span class="chip">Data Cleaning</span>
+                            <span class="chip">Data Wrangling</span>
+                            <span class="chip">EDA</span>
+                            <span class="chip">Statistical Analysis</span>
+                            <span class="chip">Data Modeling</span>
+                            <span class="chip">Data Visualization</span>
+                            <span class="chip">KPI Reporting</span>
+                        </div>
+                    </div>
+
+                    <!-- Machine Learning -->
+                    <div class="toolkit-card reveal-up" data-tilt>
+                        <div class="tk-header">
+                            <div class="tk-dot" style="background:var(--coral)"></div>
+                            <span class="tk-title">MACHINE LEARNING</span>
+                        </div>
+                        <div class="chips-container">
+                            <span class="chip">Regression</span>
+                            <span class="chip">Classification</span>
+                            <span class="chip">Scikit-learn</span>
+                            <span class="chip">TensorFlow</span>
+                            <span class="chip">Keras</span>
+                            <span class="chip">OpenCV</span>
+                            <span class="chip">Feature Engineering</span>
+                        </div>
+                    </div>
+
+                    <!-- Analytics, BI & Tools -->
+                    <div class="toolkit-card reveal-up" data-tilt>
+                        <div class="tk-header">
+                            <div class="tk-dot" style="background:var(--purple)"></div>
+                            <span class="tk-title">ANALYTICS, BI &amp; TOOLS</span>
+                        </div>
+                        <div class="chips-container">
+                            <span class="chip">Power BI</span>
+                            <span class="chip">Excel</span>
+                            <span class="chip">Streamlit</span>
+                            <span class="chip">Git</span>
+                            <span class="chip">VS Code</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION & CERTIFICATIONS SECTION -->
+        <section id="education" class="section">
+            <div class="section-container">
+                <div class="section-header reveal-up">
+                    <span class="section-tag">05 / QUALIFICATIONS</span>
+                    <h2 class="section-title">Education &amp; <span class="gradient-text">Certifications</span></h2>
+                </div>
+
+                <div class="two-col-grid">
+                    <!-- Education -->
+                    <div class="info-card reveal-up" data-tilt>
+                        <div class="info-header">
+                            <span class="info-icon">🎓</span>
+                            <h3 class="info-title">Education</h3>
+                        </div>
+
+                        <div class="edu-entry">
+                            <div class="edu-degree">B.E. Computer Science and Engineering</div>
+                            <div class="edu-school">Nehru Institute of Engineering and Technology, Coimbatore</div>
+                            <div class="edu-score"><span class="badge-score">CGPA: 8.8</span></div>
+                        </div>
+
+                        <div class="edu-divider"></div>
+
+                        <div class="edu-entry">
+                            <div class="edu-degree">Higher Secondary Certificate (HSC)</div>
+                            <div class="edu-school">SVG Girls Higher Secondary School, Udumalpet · 2021–2022</div>
+                            <div class="edu-score"><span class="badge-score">Percentage: 75%</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Certifications -->
+                    <div class="info-card reveal-up" data-tilt>
+                        <div class="info-header">
+                            <span class="info-icon">📜</span>
+                            <h3 class="info-title">NPTEL Certifications</h3>
+                        </div>
+
+                        <ul class="cert-list">
+                            <li><span>Joy of Computing using Python</span></li>
+                            <li><span>Cloud Computing</span></li>
+                            <li><span>Database Management System</span></li>
+                            <li><span>Internet of Things (IoT)</span></li>
+                            <li><span>Programming in Java</span></li>
+                            <li><span>Programming in Modern C++</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="section">
+            <div class="section-container">
+                <div class="section-header reveal-up">
+                    <span class="section-tag">06 / GET IN TOUCH</span>
+                    <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info-card reveal-up">
+                        <h3 class="contact-headline">Open to opportunities</h3>
+                        <p class="contact-desc">
+                            Currently open for <strong>Data Analyst / Data Scientist</strong> roles in 
+                            <strong>Hyderabad, Pune, Mumbai, Coimbatore, Chennai, and Bengaluru</strong>.
+                        </p>
+
+                        <div class="contact-methods">
+                            <a href="mailto:priyasenthil054@gmail.com" class="contact-item">
+                                <div class="c-icon">✉</div>
+                                <div>
+                                    <span class="c-label">Email</span>
+                                    <span class="c-val">priyasenthil054@gmail.com</span>
+                                </div>
+                            </a>
+
+                            <a href="tel:+916385379422" class="contact-item">
+                                <div class="c-icon">📞</div>
+                                <div>
+                                    <span class="c-label">Phone</span>
+                                    <span class="c-val">+91 63853 79422</span>
+                                </div>
+                            </a>
+
+                            <a href="https://www.linkedin.com/in/selvapriya-s-3bb65a297/" target="_blank" rel="noopener noreferrer" class="contact-item">
+                                <div class="c-icon">🔗</div>
+                                <div>
+                                    <span class="c-label">LinkedIn</span>
+                                    <span class="c-val">linkedin.com/in/selvapriya-s</span>
+                                </div>
+                            </a>
+
+                            <a href="https://github.com/Selvapriya033" target="_blank" rel="noopener noreferrer" class="contact-item">
+                                <div class="c-icon">⚡</div>
+                                <div>
+                                    <span class="c-label">GitHub</span>
+                                    <span class="c-val">github.com/Selvapriya033</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <form class="contact-form-card reveal-up" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" required placeholder="e.g. Jane Doe">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" required placeholder="e.g. jane@company.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="4" required placeholder="Tell me about your role or project..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span>Send Message</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"/>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="brand-cube"></span>
+                <span>SELVAPRIYA S</span>
+            </div>
+            <p>DATA ANALYST &bull; DATA SCIENCE &bull; MACHINE LEARNING</p>
+            <p class="copyright">&copy; 2026 Selvapriya S. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
